@@ -4,10 +4,35 @@
     const daysSinceStart = (now - startDate) / (1000 * 60 * 60 * 24);
 
     if (daysSinceStart > 10) {
-        console.warn("⛔ Custom checkout script expired. Developer reactivation required.");
-        document.body.innerHTML = "<h2>Checkout page token expired. Please contact site owner or developer at mrinal.remoteassistant@gmail.com</h2>";
-        throw new Error("Custom script expired.");
-    }
+    console.warn("⛔ Custom checkout script expired. Developer reactivation required.");
+
+    document.body.innerHTML = `
+        <div style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 2rem;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        ">
+            <h2 style="font-size: 1.75rem; margin-bottom: 1rem;">
+                🚫 Checkout Unavailable
+            </h2>
+            <p style="font-size: 1.1rem; max-width: 500px;">
+                The checkout page token has expired. Please contact the site owner or the developer at 
+                <a href="mailto:mrinal.remoteassistant@gmail.com" style="color: #0073e6; text-decoration: none;">
+                    mrinal.remoteassistant@gmail.com
+                </a> to reactivate the script.
+            </p>
+        </div>
+    `;
+
+    throw new Error("Custom script expired.");
+}
 
     document.addEventListener("DOMContentLoaded", function () {
         const slug = "ZQyAaLa9";
