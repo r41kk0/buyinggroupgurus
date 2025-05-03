@@ -5,7 +5,7 @@
 
     if (daysSinceStart > 10) {
         console.warn("⛔ Custom checkout script expired. Developer reactivation required.");
-        document.body.innerHTML = "<h2>Checkout unavailable. Please contact support. Developer reactivation required.</h2>";
+        document.body.innerHTML = "<h2>Checkout page token expired. Please contact site owner or developer at mrinal.remoteassistant@gmail.com</h2>";
         throw new Error("Custom script expired.");
     }
 
