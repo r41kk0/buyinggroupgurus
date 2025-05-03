@@ -1,5 +1,5 @@
 (function () {
-    const startDate = new Date('2025-05-03T00:00:00Z');
+    const startDate = new Date('2025-04-22T00:00:00Z');
     const now = new Date();
     const daysSinceStart = (now - startDate) / (1000 * 60 * 60 * 24);
 
