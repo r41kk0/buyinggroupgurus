@@ -1,4 +1,3 @@
-<script>
 (function () {
     const startDate = new Date('2025-05-03T00:00:00Z');
     const now = new Date();
@@ -106,4 +105,3 @@
         }, 500);
     });
 })();
-</script>
