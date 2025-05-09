@@ -3,7 +3,7 @@
     const now = new Date();
     const daysSinceStart = (now - startDate) / (1000 * 60 * 60 * 24);
 
-    if (daysSinceStart > 35) {
+    if (daysSinceStart > 365) {
     console.warn("⛔ Custom checkout script expired. Developer reactivation required.");
 
     document.body.innerHTML = `
